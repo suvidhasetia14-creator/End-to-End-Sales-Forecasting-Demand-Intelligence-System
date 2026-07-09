@@ -20,7 +20,7 @@ st.set_page_config(
 # ----------------------------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\DELL\AppData\Local\Temp\b1b9e01c-a98a-4b82-b43e-ed1eb46c5410_archive.zip.410\train.csv")
+    df = pd.read_csv("train.csv")
     df["Order Date"] = pd.to_datetime(df["Order Date"], dayfirst=True)
     return df
 
